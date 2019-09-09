@@ -1,0 +1,892 @@
+@font-face {
+    font-family: 'teachers_studentregular';
+    font-weight: normal;
+    font-style: normal;
+    src: url('./fonts/teachers_student/teachersstudent_regular.ttf') format('truetype');
+    src: url('./fonts/teachers_student/teachersstudent_regular.otf') format('opentype');
+    src: url('./fonts/teachers_student/teachersstudent_regular-webfont.eot');
+    src: url('./fonts/teachers_student/teachersstudent_regular-webfont.svg');
+    src: url('./fonts/teachers_student/teachersstudent_regular-webfont.woff');
+    src: url('./fonts/teachers_student/teachersstudent_regular-webfont.woff2');
+}
+
+
+@font-face {
+    font-family: "Quicksand_Regular";
+    font-weight: 300;
+    font-style: normal;
+    src: url('./fonts/quicksand/Quicksand-Regular.otf') format('opentype');
+    src: url('./fonts/quicksand/quicksand-regular-webfont.eot');
+    src: url('./fonts/quicksand/quicksand-regular-webfont.svg');
+    src: url('./fonts/quicksand/quicksand-regular-webfont.ttf') format('truetype');
+    src: url('./fonts/quicksand/quicksand-regular-webfont.woff') format('woff');
+    src: url('./fonts/quicksand/quicksand-regular-webfont.woff2');
+}
+
+// ------------ Variables ------------
+$header-font: "teachers_studentregular";
+$main-font: "Quicksand_Regular";
+$blue-color: #9cbdf3;
+// #7373C4
+$orange-color: #fa5830;
+$grey-color: #464646;
+
+// ------------ Global styles ------------
+body {
+    box-sizing: border-box;
+    padding-top: 110px;
+}
+
+img {
+    height: 100%;
+    width: 100%;
+}
+
+.btn-primary {
+    font-family: $header-font;
+    padding: 0.1rem;
+    background-color: $orange-color;
+    border: none;
+
+    &:hover {
+        box-shadow: 3px 3px 3px grey;
+        background-color: $orange-color;
+    }
+}
+
+.btn-secondary {
+    font-family: $header-font;
+    padding: 0.1rem;
+    background-color: $blue-color;
+    border: none;
+
+    &:hover {
+        box-shadow: 3px 3px 3px grey;
+        background-color: $blue-color;
+    }
+}
+
+.btn-link,
+.btn-link:focus,
+.btn-link:active,
+.btn-link:hover {
+    font-family: $main-font;
+    color: black;
+    text-decoration: none;
+    border: 0;
+    padding: 0;
+    text-align: left;
+}
+
+.card {
+    border: none;
+}
+
+.card-header {
+    background-color: #fff;
+}
+
+a {
+    cursor: pointer;
+}
+
+// ------------ Navigation styles ------------
+
+nav.navbar {
+    background-color: $blue-color;
+}
+
+.navbar-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 60px;
+}
+
+.navbar-brand {
+    font-family: $header-font;
+    color: #fff;
+    font-size: 2.4rem;
+
+    .navbar-brand-secondary {
+        font-size: 1.4rem;
+    }
+
+    &:hover {
+        text-shadow: 3px 3px 3px #a0a0a0;
+        color: #fff;
+    }
+}
+
+.toggler-icon-open {
+    height: 35px;
+    width: 35px;
+    margin-left: -8px;
+}
+
+.toggler-icon-closed {
+    height: 40px;
+    width: 40px;
+    display: none;
+    margin-left: -8px;
+    transform: translateY(-10px);
+}
+
+.nav-item {
+    height: 50px;
+    // padding: 0.8rem 0;
+    font-family: $main-font;
+    color: #fff;
+
+    &:hover {
+        text-shadow: 3px 3px 3px #a0a0a0;
+        color: #fff;
+    }
+}
+
+// ------------ Hero section styles ------------
+.hero-section {
+    width: 95%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.hero-section-card {
+    .hero-title {
+        font-family: $header-font;
+        font-size: 2rem;
+        color: $blue-color;
+        margin: 0;
+    }
+
+    .hero-body {
+        overflow: hidden;
+    }
+
+    .hero-img-card {
+        margin-bottom: 0.5rem;
+
+        img {
+            border-radius: 10px;
+        }
+    }
+}
+
+.hero-text {
+    font-size: 0.95rem;
+    text-align: left;
+    font-family: $main-font;
+
+    span {
+        color: $orange-color;
+        font-weight: bold;
+    }
+
+    a {
+        color: $orange-color;
+
+        &:hover {
+            color: $blue-color;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+    }
+}
+
+.hero-btn {
+    font-size: 1.5rem;
+    width: 85%;
+}
+
+// ------------ Carousel of reviews section ------------
+.review-carousel {
+    margin: 2rem 0 2rem 0; // doing bottom margin so that the targets section margin can be removed on the other pages automatically 
+    height: 24vh;
+    display: grid;
+    grid-template-columns: 1fr;
+    align-content: center;
+    border-top: 1px solid $orange-color;
+    border-bottom: 1px solid $orange-color;
+}
+
+.carousel-inner {
+    height: 100%;
+    width: 75%;
+    margin: 0 auto;
+}
+
+.carousel-item p {
+    font-family: $main-font;
+    font-size: 0.8rem;
+    color: $grey-color;
+    text-align: center;
+    margin: 0;
+}
+
+.carousel-icon {
+    background-color: $orange-color;
+}
+
+// ------------ Smarties' targets card section ------------
+.targets-section {
+    margin: 0 auto;
+}
+
+.target-section-cards {
+    width: 80%;
+    margin: -0.5rem auto 0 auto;
+}
+
+.target-section-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 1rem; // between each card but also adds it to the top card whcih we cancel out half with the -0.5rem above 
+
+    .target-img {
+        height: 80px;
+        width: 80px;
+    }
+
+    .card-text {
+        text-align: center;
+
+        .target-title {
+            font-family: $header-font;
+            color: $blue-color;
+            font-size: 1.8rem;
+            padding: 0.8rem 0 0 0;
+            margin: 0;
+            text-decoration: none;
+        }
+
+        .target-text,
+        .target-text-list {
+            font-size: 0.95rem;
+            font-family: $main-font;
+        }
+
+        .target-text {
+            a {
+                color: $orange-color;
+
+                &:hover {
+                    color: $blue-color;
+                    text-decoration: none;
+                    transition: color 0.3s ease;
+                }
+            }
+        }
+
+        .target-text-list {
+            margin: 0;
+            padding: 0 0 1rem 0;
+            list-style-type: none;
+
+            a {
+                color: $orange-color;
+
+                &:hover {
+                    color: $blue-color;
+                    text-decoration: none;
+                    transition: color 0.3s ease;
+                }
+            }
+        }
+    }
+}
+
+.targets-btn {
+    width: 85%;
+    margin: 0 auto;
+}
+
+.target-btn {
+    margin-top: 1rem;
+    width: 100%;
+    font-size: 1.5rem;
+}
+
+#btn2 {
+    margin-top: 0.5rem;
+}
+
+
+
+// ------------ Image gallery section ------------
+
+.image-gallery-section {
+    width: 85%;
+    margin: 2rem auto 0 auto;
+}
+
+.image-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    // align-items: center;
+    // display: grid;
+    // grid-template-columns: 1fr;
+}
+
+.image-wrapper {
+    &:last-child {
+        display: none;
+    }
+
+    img {
+        border-radius: 10px;
+        margin-top: 0.4rem;
+    }
+}
+
+// ------------ Socials section ------------
+.socials-section {
+    margin-top: 2rem;
+    background-color: $blue-color;
+}
+
+.socials-banner {
+    margin: 0 auto;
+    height: 10vh;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    align-items: center;
+    justify-items: center;
+    color: #fff;
+
+    .socials-icon {
+        height: 40px;
+        width: 40px;
+    }
+
+    .socials-title {
+        font-family: $header-font;
+        font-size: 1.4rem;
+    }
+}
+
+// ------------ Footer ------------
+footer {
+    width: 85%;
+    margin: 2rem auto 0 auto;
+}
+
+.footer-wrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+    text-align: center;
+
+
+    .footer-description,
+    .footer-contact {
+        width: 95%;
+        margin: 0 auto;
+        border-bottom: 1px solid $orange-color;
+        padding-bottom: 1rem;
+        font-size: 0.8rem;
+        color: $grey-color;
+        font-family: $main-font;
+    }
+
+    .footer-contact,
+    .footer-copy {
+        padding-top: 1rem;
+    }
+
+    .footer-copy,
+    .footer-copy span {
+        font-size: 1.3rem;
+        font-family: $header-font;
+        color: $blue-color;
+    }
+
+    .footer-web {
+        font-family: $main-font;
+        font-size: 0.7rem;
+        color: #464646;
+
+        a {
+            color: $blue-color;
+
+            &:hover {
+                color: $orange-color;
+                text-decoration: none;
+                transition: color 0.3s ease;
+            }
+        }
+
+
+    }
+
+}
+
+// --------- faq page accordion ------------
+.accordion-section {
+    margin-top: 2.5rem;
+}
+
+.accordion-header {
+    // border-bottom: 1px solid $blue-color;
+    border-top: 1px solid $orange-color;
+}
+
+.btn-link p {
+    font-size: 0.95rem;
+}
+
+.accordion-body {
+    font-family: $main-font;
+    color: $grey-color;
+    font-size: 0.95rem;
+
+    a {
+        color: $orange-color;
+
+        &:hover {
+            color: $blue-color;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+    }
+}
+
+.accordion>.card:last-child {
+    border-bottom: 1px solid $orange-color;
+}
+
+
+
+// ----------- MEDIA QUERIES ----------------
+@media (min-width: 768px) {
+    .navbar-wrapper {
+        height: 100px;
+    }
+
+    .navbar-brand {
+        font-size: 3.2rem;
+
+        .navbar-brand-secondary {
+            font-size: 2rem;
+            padding-left: 0.5rem;
+        }
+    }
+
+    .toggler-icon-open {
+        height: 50px;
+        width: 50px;
+        transform: translateY(-10px);
+    }
+
+    .toggler-icon-closed {
+        width: 55px;
+        height: 55px;
+        transform: translateY(-18px);
+    }
+
+
+    .nav-item {
+        font-size: 1.2rem;
+        height: 70px;
+    }
+
+    //hero section
+
+    .hero-section-card {
+        .hero-title {
+            font-size: 2.6rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .hero-img-card {
+            height: 60vh;
+            margin-top: 1.5rem;
+
+            img {
+                object-fit: cover;
+            }
+        }
+    }
+
+    .hero-text {
+        font-size: 1rem;
+    }
+
+    .hero-card-single {
+        margin: 1.5rem auto 0 auto;
+        width: 90%;
+    }
+
+    .hero-btn {
+        font-size: 2rem;
+        width: 60%;
+        margin-top: 1.5rem;
+    }
+
+    // Review carousel section
+    .review-carousel {
+        margin: 3rem 0 0 0;
+        height: 30vh;
+    }
+
+    .carousel-item p {
+        font-size: 0.9rem;
+    }
+
+    .carousel-icon {
+        height: 30px;
+        width: 30px;
+    }
+
+    // targets section
+
+    .target-section-cards {
+        width: 60%;
+        margin-top: 1.2rem;
+        // 1.2 plus 1.8rem padding gives 3rem
+    }
+
+    .target-section-card {
+        padding-top: 1.8rem;
+
+        .target-img {
+            height: 110px;
+            width: 110px;
+        }
+
+        .card-text {
+            .target-title {
+                font-size: 2rem;
+            }
+
+            .target-text,
+            .target-text-list {
+                font-size: 1rem;
+            }
+        }
+    }
+
+    .targets-btn {
+        width: 60%;
+    }
+
+    .target-btn {
+        font-size: 2rem;
+    }
+
+    // image gallery section
+    .image-gallery-section {
+        width: 95%;
+        margin: 3rem auto 0 auto;
+    }
+
+    .image-container {
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+
+    .image-wrapper {
+        &:last-child {
+            display: block;
+        }
+
+        margin: 0 0.2rem;
+
+        img {
+            margin-top: 0;
+        }
+    }
+
+    //socials section
+    .socials-section {
+        margin-top: 3rem;
+    }
+
+    .socials-banner {
+        width: 90%;
+        height: 13vh;
+
+        .socials-icon {
+            height: 45px;
+            width: 45px;
+        }
+
+        .socials-title {
+            font-size: 2rem;
+        }
+    }
+
+    // footer
+    footer {
+        width: 95%;
+    }
+
+    .footer-wrapper {
+        grid-template-columns: 1fr 1fr;
+
+        .footer-description,
+        .footer-contact {
+            width: 90%;
+            font-size: 0.9rem;
+            padding-top: 0;
+        }
+
+        .footer-copy {
+            font-size: 1.4rem;
+            padding-top: 0.5rem;
+        }
+
+        .footer-web {
+            padding-top: 0.6rem;
+            font-size: 0.8rem;
+        }
+    }
+
+    // accordion on faq page
+    .accordion-section {
+        width: 70%;
+        margin: 3rem auto 0 auto;
+    }
+
+    .btn-link p {
+        font-size: 1rem;
+    }
+
+    .accordion-body {
+        font-size: 1rem;
+    }
+}
+
+@media (min-width: 992px) {
+    .navbar-nav {
+        // display: flex;
+        // align-items: center;
+    }
+
+    .navbar-wrapper {
+        justify-content: space-between;
+    }
+
+    .nav-item {
+        font-size: 1rem;
+        text-align: center;
+        height: 50px;
+    }
+
+    //hero section
+
+    .hero-cards {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        grid-column-gap: 30px;
+        margin-top: 1.5rem;
+    }
+
+    .hero-section-card {
+        .hero-img-card {
+            padding: 0;
+            margin: 0;
+            height: auto;
+        }
+    }
+
+    .hero-btn {
+        width: 100%;
+        margin-top: 0;
+    }
+
+    // review carousel section
+    .review-carousel {
+        margin: 5rem 0 5rem 0;
+    }
+
+    .carousel-item p {
+        font-size: 0.95rem;
+    }
+
+    .carousel-icon {
+        height: 35px;
+        width: 35px;
+    }
+
+    // targets section
+
+    .target-section-cards {
+        width: 95%;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-column-gap: 20px;
+        padding-top: 0;
+    }
+
+    .targets-btn {
+        width: 50%;
+    }
+
+    .target-btn {
+        margin-top: 2rem;
+    }
+
+    //image gallery sec
+    .image-gallery-section {
+        margin: 5rem auto 0 auto;
+    }
+
+
+    //socials
+    .socials-section {
+        margin-top: 5rem;
+    }
+
+    .socials-banner {
+        width: 95%;
+        height: 15vh;
+
+        .socials-icon {
+            height: 50px;
+            width: 50px;
+        }
+    }
+
+    //footer sec
+
+    //accordion sec
+    .accordion-section {
+        width: 60%;
+    }
+}
+
+@media (min-width: 1200px) {
+    .nav-item {
+        font-size: 1.1rem;
+    }
+
+    // hero section
+    .hero-section {
+        width: 95%;
+    }
+
+    .hero-cards,
+    .hero-card-single {
+        margin-top: 3rem;
+    }
+
+    .hero-section-card {
+        .hero-title {
+            font-size: 2.9rem;
+        }
+    }
+
+    .hero-text {
+        font-size: 1.1rem;
+        line-height: 1.8rem;
+    }
+
+    .hero-card-single {
+        width: 85%;
+    }
+
+    //review carousel
+    .review-carousel {
+        margin: 6rem 0;
+    }
+
+    .carousel-inner {
+        width: 60%;
+    }
+
+    .carousel-item p {
+        font-size: 1rem;
+        line-height: 1.7rem;
+    }
+
+    .carousel-icon {
+        height: 40px;
+        width: 40px;
+    }
+
+    //targets sec
+    .target-section-cards {
+        width: 95%;
+        grid-column-gap: 30px;
+    }
+
+    .target-section-card {
+
+        .card-text {
+            width: 75%;
+
+            .target-title {
+                font-size: 2.4rem;
+            }
+
+            .target-text,
+            .target-text-list {
+                font-size: 1.1rem;
+                line-height: 1.8rem;
+            }
+        }
+    }
+
+    .targets-btn {
+        width: 35%;
+    }
+
+    //image gall sec
+    .image-gallery-section {
+        margin-top: 7rem;
+    }
+
+    //socials
+    .socials-section {
+        margin-top: 7rem;
+    }
+
+    .socials-banner {
+        width: 80%;
+
+        .socials-icon {
+            height: 55px;
+            width: 55px;
+        }
+
+        .socials-title {
+            font-size: 2.3rem;
+        }
+    }
+
+    // footer
+    footer {
+        width: 95%;
+        margin-top: 3rem;
+    }
+
+    .footer-wrapper {
+
+        .footer-description,
+        .footer-contact {
+            font-size: 1rem;
+            padding-bottom: 2rem;
+            line-height: 1.7rem;
+        }
+
+        .footer-copy {
+            padding-top: 2rem;
+            font-size: 1.6rem;
+        }
+
+        .footer-web {
+            font-size: 0.9rem;
+            padding-top: 2.3rem;
+        }
+    }
+
+    //accordion sec
+
+    .btn-link p,
+    .accordion-body {
+        font-size: 1.1rem;
+    }
+}
